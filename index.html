@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>株式会社アーベイン | URBAIN - 不動産のことなら</title>
+  <meta name="description" content="株式会社アーベインは、東京を中心に不動産の売買・賃貸・管理を手がける不動産会社です。お客様一人ひとりに寄り添い、最適な住まいをご提案します。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER / NAV ===== -->
+  <header id="header">
+    <nav class="nav-container">
+      <a href="#" class="logo-link">
+        <div class="logo-wrap">
+          <!--
+            Logo mark: city skyline + bird in flight + bronze arc
+            ViewBox 260×160 — precise recreation of the urbain logo
+          -->
+          <svg class="logo-svg" viewBox="0 0 260 160" xmlns="http://www.w3.org/2000/svg" aria-label="urbain logo">
+            <!-- ── Bronze sweep arc ── -->
+            <path d="M 18,100 C 28,55 90,18 195,50"
+                  fill="none" stroke="#B8864E" stroke-width="3"
+                  stroke-linecap="round"/>
+
+            <!-- ── Buildings (base y=105, ground at y=108) ── -->
+            <!-- B1: narrow, dark navy -->
+            <rect x="20"  y="83"  width="9"  height="22" fill="#253562"/>
+            <!-- B2: tallest, darkest navy -->
+            <rect x="31"  y="58"  width="13" height="47" fill="#1B2A4A"/>
+            <!-- B3: medium, steel blue -->
+            <rect x="46"  y="70"  width="10" height="35" fill="#3D6090"/>
+            <!-- B4: bronze/copper highlight building -->
+            <rect x="58"  y="76"  width="8"  height="29" fill="#B8864E"/>
+            <!-- B5: tall, dark navy -->
+            <rect x="68"  y="64"  width="11" height="41" fill="#1B2A4A"/>
+            <!-- B6: medium, medium blue -->
+            <rect x="81"  y="74"  width="9"  height="31" fill="#2C4A7A"/>
+            <!-- B7: shorter, slate blue -->
+            <rect x="92"  y="82"  width="8"  height="23" fill="#4A6FA5"/>
+            <!-- B8: short, dark -->
+            <rect x="102" y="88"  width="7"  height="17" fill="#2C3E6B"/>
+
+            <!-- ── Ground sweep curve ── -->
+            <path d="M 16,110 C 38,104 70,107 110,110"
+                  fill="none" stroke="#1B2A4A" stroke-width="1.8" stroke-linecap="round"/>
+
+            <!-- ── Bird in flight (upper-right quadrant) ── -->
+            <!-- Bird is a heron/large bird soaring to the upper-right -->
+
+            <!-- Upper trailing wing — sweeps up and back-left -->
+            <path d="M 152,62
+                     C 148,50 143,36 132,28
+                     C 134,30 138,36 142,46
+                     C 146,53 150,59 152,62 Z"
+                  fill="#1B2A4A"/>
+            <!-- Upper trailing wing — lighter inner layer -->
+            <path d="M 152,62
+                     C 148,52 144,42 137,33
+                     C 140,38 145,50 152,62 Z"
+                  fill="#2C4A7A"/>
+
+            <!-- Forward upper wing — sweeps toward bird's head -->
+            <path d="M 152,62
+                     C 160,50 172,42 186,44
+                     C 178,50 164,58 152,62 Z"
+                  fill="#1B2A4A"/>
+            <!-- Forward upper wing — lighter inner layer -->
+            <path d="M 152,62
+                     C 158,53 168,46 180,46
+                     C 173,52 162,58 152,62 Z"
+                  fill="#3D6090"/>
+
+            <!-- Main body — streamlined, flying right -->
+            <path d="M 152,62
+                     C 164,58 180,57 198,50
+                     C 188,62 170,66 152,62 Z"
+                  fill="#1B2A4A"/>
+
+            <!-- Lower forward wing — droops forward-downward -->
+            <path d="M 152,62
+                     C 158,70 167,76 178,74
+                     C 170,69 160,65 152,62 Z"
+                  fill="#253562"/>
+
+            <!-- Neck and head — pointing forward-right -->
+            <path d="M 198,50
+                     C 206,44 216,40 222,36
+                     C 216,40 208,46 198,50 Z"
+                  fill="#1B2A4A"/>
+            <!-- Beak tip -->
+            <path d="M 218,38 C 222,36 228,35 230,32 C 226,34 221,37 218,38 Z"
+                  fill="#1B2A4A"/>
+
+            <!-- Small tail feathers at back of body -->
+            <path d="M 152,62
+                     C 148,65 143,68 138,66
+                     C 142,65 148,63 152,62 Z"
+                  fill="#2C3E6B"/>
+          </svg>
+
+          <span class="logo-text">urbain</span>
+        </div>
+      </a>
+
+      <button class="hamburger" id="hamburger" aria-label="メニュー">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">会社概要</a></li>
+        <li><a href="#service">サービス</a></li>
+        <li><a href="#properties">物件情報</a></li>
+        <li><a href="#flow">ご利用の流れ</a></li>
+        <li><a href="#contact" class="nav-cta">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1800&q=80&auto=format&fit=crop" alt="都市の建物" class="hero-img">
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-sub fade-up delay-1">あなたの理想の住まいへ</p>
+      <h1 class="hero-title fade-up delay-2">
+        誠実に、真摯に。<br>
+        <span>暮らしに寄り添う</span><br>
+        不動産パートナー。
+      </h1>
+      <p class="hero-desc fade-up delay-3">
+        株式会社アーベインは、東京を拠点に<br class="pc-only">
+        お客様一人ひとりの「最適な住まい」を共に探します。
+      </p>
+      <div class="hero-btns fade-up delay-4">
+        <a href="#properties" class="btn-primary">物件を探す</a>
+        <a href="#contact" class="btn-secondary">無料相談</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>SCROLL</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===== TICKER ===== -->
+  <div class="ticker-wrap">
+    <div class="ticker-track">
+      <span>東京都内の物件多数取り扱い中</span>
+      <span class="sep">｜</span>
+      <span>売買・賃貸・管理まで一貫サポート</span>
+      <span class="sep">｜</span>
+      <span>無料相談受付中</span>
+      <span class="sep">｜</span>
+      <span>東京都港区高輪</span>
+      <span class="sep">｜</span>
+      <span>東京都内の物件多数取り扱い中</span>
+      <span class="sep">｜</span>
+      <span>売買・賃貸・管理まで一貫サポート</span>
+      <span class="sep">｜</span>
+      <span>無料相談受付中</span>
+      <span class="sep">｜</span>
+      <span>東京都港区高輪</span>
+      <span class="sep">｜</span>
+    </div>
+  </div>
+
+  <!-- ===== FEATURES ===== -->
+  <section id="features" class="section-light">
+    <div class="container">
+      <div class="features-grid">
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg viewBox="0 0 48 48" fill="none">
+              <circle cx="24" cy="24" r="22" stroke="#B8864E" stroke-width="2"/>
+              <path d="M14 30 L24 16 L34 30" stroke="#1B2A4A" stroke-width="2.5" stroke-linejoin="round"/>
+              <rect x="19" y="24" width="10" height="8" rx="1" stroke="#1B2A4A" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3>豊富な物件情報</h3>
+          <p>東京都内を中心に、売買・賃貸の幅広い物件ラインナップをご用意。お客様のご要望に合った物件をご提案します。</p>
+        </div>
+        <div class="feature-card reveal delay-1">
+          <div class="feature-icon">
+            <svg viewBox="0 0 48 48" fill="none">
+              <circle cx="24" cy="24" r="22" stroke="#B8864E" stroke-width="2"/>
+              <path d="M24 14 C18 14 14 18 14 23 C14 28 18 32 24 34 C30 32 34 28 34 23 C34 18 30 14 24 14Z" stroke="#1B2A4A" stroke-width="2"/>
+              <circle cx="24" cy="23" r="4" stroke="#1B2A4A" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3>地域密着の専門知識</h3>
+          <p>港区・高輪を拠点に、地域の情報を熟知したスタッフが在籍。細やかな情報提供でご満足いただけるサービスを提供します。</p>
+        </div>
+        <div class="feature-card reveal delay-2">
+          <div class="feature-icon">
+            <svg viewBox="0 0 48 48" fill="none">
+              <circle cx="24" cy="24" r="22" stroke="#B8864E" stroke-width="2"/>
+              <path d="M16 24 L21 29 L32 18" stroke="#1B2A4A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>安心・信頼のサポート</h3>
+          <p>契約から入居後まで、一貫したサポート体制。不動産に関するあらゆるご相談に、誠実にお応えします。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section-white">
+    <div class="container about-grid">
+      <div class="about-img-wrap reveal">
+        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80&auto=format&fit=crop" alt="オフィスイメージ" class="about-img">
+        <div class="about-badge">
+          <span class="badge-num">10<sup>+</sup></span>
+          <span class="badge-label">Years of<br>Experience</span>
+        </div>
+      </div>
+      <div class="about-text reveal delay-1">
+        <p class="section-label">ABOUT US</p>
+        <h2 class="section-title">私たちのこと</h2>
+        <p class="about-lead">株式会社アーベインは、東京・港区高輪に本社を置く不動産会社です。</p>
+        <p class="about-body">
+          "urbain"とはフランス語で「都市の」「洗練された」を意味します。その名の通り、都市に生きる人々の多様な暮らしに寄り添い、洗練されたサービスをご提供することを使命としています。
+        </p>
+        <p class="about-body">
+          代表取締役 村上英資のもと、お客様の「安心」「信頼」「満足」を第一に、売買・賃貸・管理のすべてにおいて真摯に向き合ってまいります。
+        </p>
+        <div class="about-stats">
+          <div class="stat">
+            <span class="stat-num" data-count="500">0</span><span class="stat-unit">+</span>
+            <span class="stat-label">取扱物件数</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num" data-count="98">0</span><span class="stat-unit">%</span>
+            <span class="stat-label">顧客満足度</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num" data-count="300">0</span><span class="stat-unit">+</span>
+            <span class="stat-label">成約実績</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section id="service" class="section-navy">
+    <div class="container">
+      <div class="section-header center reveal">
+        <p class="section-label light">SERVICE</p>
+        <h2 class="section-title light">サービス内容</h2>
+        <p class="section-desc light">アーベインでは、不動産に関するあらゆるニーズにお応えします。</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal delay-1">
+          <div class="service-img-wrap">
+            <img src="https://images.unsplash.com/photo-1582407947304-fd86f28f5b30?w=600&q=80&auto=format&fit=crop" alt="不動産売買">
+            <div class="service-overlay"></div>
+          </div>
+          <div class="service-body">
+            <span class="service-num">01</span>
+            <h3>不動産売買</h3>
+            <p>マンション・一戸建て・土地など、物件の購入・売却をトータルサポート。最適な条件でのお取引を実現します。</p>
+            <a href="#contact" class="service-link">詳しく見る →</a>
+          </div>
+        </div>
+        <div class="service-card reveal delay-2">
+          <div class="service-img-wrap">
+            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80&auto=format&fit=crop" alt="賃貸仲介">
+            <div class="service-overlay"></div>
+          </div>
+          <div class="service-body">
+            <span class="service-num">02</span>
+            <h3>賃貸仲介</h3>
+            <p>ご希望の条件・エリアに合った賃貸物件をご紹介。内見から契約まで、丁寧にサポートいたします。</p>
+            <a href="#contact" class="service-link">詳しく見る →</a>
+          </div>
+        </div>
+        <div class="service-card reveal delay-3">
+          <div class="service-img-wrap">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80&auto=format&fit=crop" alt="不動産管理">
+            <div class="service-overlay"></div>
+          </div>
+          <div class="service-body">
+            <span class="service-num">03</span>
+            <h3>不動産管理</h3>
+            <p>オーナー様の大切な資産を適正に管理。入居者対応・建物メンテナンスまで、安心してお任せください。</p>
+            <a href="#contact" class="service-link">詳しく見る →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROPERTIES ===== -->
+  <section id="properties" class="section-light">
+    <div class="container">
+      <div class="section-header center reveal">
+        <p class="section-label">PROPERTIES</p>
+        <h2 class="section-title">おすすめ物件</h2>
+        <p class="section-desc">現在ご紹介できる注目物件をピックアップしました。</p>
+      </div>
+      <div class="prop-tabs reveal">
+        <button class="tab-btn active" data-tab="buy">売買物件</button>
+        <button class="tab-btn" data-tab="rent">賃貸物件</button>
+      </div>
+      <div class="props-grid" id="propsGrid"></div>
+      <div class="center-btn reveal">
+        <a href="#contact" class="btn-primary">物件についてお問い合わせ</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FLOW ===== -->
+  <section id="flow" class="section-white">
+    <div class="container">
+      <div class="section-header center reveal">
+        <p class="section-label">HOW IT WORKS</p>
+        <h2 class="section-title">ご利用の流れ</h2>
+        <p class="section-desc">アーベインのサービスをご利用いただく際の流れをご説明します。</p>
+      </div>
+      <div class="flow-steps">
+        <div class="flow-step reveal delay-1">
+          <div class="step-circle"><span>01</span></div>
+          <div class="step-connector"><div class="step-connector-line"></div></div>
+          <div class="step-body">
+            <h3>お問い合わせ・ご相談</h3>
+            <p>電話・メール・フォームからお気軽にご連絡ください。ご要望をヒアリングし、最適なプランをご提案します。</p>
+          </div>
+        </div>
+        <div class="flow-step reveal delay-2">
+          <div class="step-circle"><span>02</span></div>
+          <div class="step-connector"><div class="step-connector-line"></div></div>
+          <div class="step-body">
+            <h3>物件のご紹介・内見</h3>
+            <p>条件に合った物件をご紹介。実際に内見いただき、住まいのイメージを膨らませてください。</p>
+          </div>
+        </div>
+        <div class="flow-step reveal delay-3">
+          <div class="step-circle"><span>03</span></div>
+          <div class="step-connector"><div class="step-connector-line"></div></div>
+          <div class="step-body">
+            <h3>条件交渉・申し込み</h3>
+            <p>気に入った物件が見つかれば、条件の調整をお手伝い。申し込み手続きをスムーズに進めます。</p>
+          </div>
+        </div>
+        <div class="flow-step reveal delay-4">
+          <div class="step-circle"><span>04</span></div>
+          <div class="step-connector"></div>
+          <div class="step-body">
+            <h3>契約・お引渡し</h3>
+            <p>重要事項説明から契約・引き渡しまで、丁寧にサポート。入居後もアフターフォローを行います。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section id="voice" class="section-beige">
+    <div class="container">
+      <div class="section-header center reveal">
+        <p class="section-label">TESTIMONIALS</p>
+        <h2 class="section-title">お客様の声</h2>
+      </div>
+      <div class="voice-slider-wrap">
+        <div class="voice-slider" id="voiceSlider">
+          <div class="voice-card">
+            <div class="voice-stars">★★★★★</div>
+            <p class="voice-text">「担当の方が親身になって話を聞いてくださり、希望以上の物件を見つけることができました。細かな疑問にも丁寧に答えていただき、安心して手続きを進めることができました。」</p>
+            <p class="voice-author">— T.M様（30代・港区）</p>
+          </div>
+          <div class="voice-card">
+            <div class="voice-stars">★★★★★</div>
+            <p class="voice-text">「初めての不動産購入で不安でしたが、アーベインのスタッフの方々に丁寧にサポートしていただき、無事に理想の住まいを手に入れることができました。本当にありがとうございました。」</p>
+            <p class="voice-author">— K.S様（40代・渋谷区）</p>
+          </div>
+          <div class="voice-card">
+            <div class="voice-stars">★★★★★</div>
+            <p class="voice-text">「投資用物件の管理をお任せしています。報告が丁寧で、トラブル対応も迅速。オーナーとして安心して任せられる会社です。引き続きよろしくお願いします。」</p>
+            <p class="voice-author">— H.Y様（50代・品川区）</p>
+          </div>
+        </div>
+        <div class="voice-dots">
+          <button class="dot active" data-i="0"></button>
+          <button class="dot" data-i="1"></button>
+          <button class="dot" data-i="2"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COMPANY INFO ===== -->
+  <section id="company" class="section-white">
+    <div class="container company-grid">
+      <div class="company-info reveal">
+        <p class="section-label">COMPANY</p>
+        <h2 class="section-title">会社情報</h2>
+        <table class="company-table">
+          <tr><th>会社名</th><td>株式会社アーベイン</td></tr>
+          <tr><th>代表者</th><td>代表取締役　村上 英資</td></tr>
+          <tr><th>所在地</th><td>〒108-0074<br>東京都港区高輪四丁目23番6号<br>ハイホーム高輪708</td></tr>
+          <tr><th>メール</th><td><a href="mailto:info@urbain-group.com">info@urbain-group.com</a></td></tr>
+          <tr><th>事業内容</th><td>不動産売買・賃貸仲介・不動産管理・コンサルティング</td></tr>
+        </table>
+      </div>
+      <div class="company-map reveal delay-1">
+        <!-- 高輪四丁目周辺マップ -->
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.07!2d139.7326!3d35.6440!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b4413e0c1a1%3A0x0!2z5p2x5Lqs6YO95Yy65rSy5Yy65qCq56mC5Zub5LiB55uu77yS77yT!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp"
+          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+          title="株式会社アーベイン 所在地">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section-navy">
+    <div class="container">
+      <div class="section-header center reveal">
+        <p class="section-label light">CONTACT</p>
+        <h2 class="section-title light">お問い合わせ</h2>
+        <p class="section-desc light">不動産に関するご相談はお気軽にどうぞ。無料でご対応いたします。</p>
+      </div>
+      <div class="contact-wrap reveal delay-1">
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">お名前 <span class="required">*</span></label>
+              <input type="text" id="fname" name="name" placeholder="山田 太郎" required>
+            </div>
+            <div class="form-group">
+              <label for="femail">メールアドレス <span class="required">*</span></label>
+              <input type="email" id="femail" name="email" placeholder="example@email.com" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="ftel">電話番号</label>
+              <input type="tel" id="ftel" name="tel" placeholder="090-0000-0000">
+            </div>
+            <div class="form-group">
+              <label for="fcategory">お問い合わせ種別 <span class="required">*</span></label>
+              <select id="fcategory" name="category" required>
+                <option value="">選択してください</option>
+                <option value="buy">売買物件について</option>
+                <option value="rent">賃貸物件について</option>
+                <option value="management">管理について</option>
+                <option value="other">その他</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group full">
+            <label for="fmessage">お問い合わせ内容 <span class="required">*</span></label>
+            <textarea id="fmessage" name="message" rows="6" placeholder="ご相談内容をご記入ください..." required></textarea>
+          </div>
+          <div class="form-group full center">
+            <button type="submit" class="btn-submit" id="submitBtn">
+              <span>送信する</span>
+              <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+          <div class="form-success" id="formSuccess">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#B8864E" stroke-width="2"/><path d="M8 12l3 3 5-5" stroke="#B8864E" stroke-width="2" stroke-linecap="round"/></svg>
+            <p>お問い合わせを受け付けました。<br>担当者よりご連絡いたします。</p>
+          </div>
+        </form>
+        <div class="contact-direct">
+          <div class="direct-item">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke="#B8864E" stroke-width="2"/></svg>
+            <div>
+              <span>メールでのお問い合わせ</span>
+              <a href="mailto:info@urbain-group.com">info@urbain-group.com</a>
+              <small>24時間受付</small>
+            </div>
+          </div>
+          <div class="direct-item">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke="#B8864E" stroke-width="2"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke="#B8864E" stroke-width="2"/></svg>
+            <div>
+              <span>本社所在地</span>
+              <a href="#company">港区高輪四丁目23番6号</a>
+              <small>ハイホーム高輪708</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="logo-wrap">
+          <!-- Footer logo: same mark, lighter palette on dark bg -->
+          <svg class="logo-svg" viewBox="0 0 260 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M 18,100 C 28,55 90,18 195,50"
+                  fill="none" stroke="#C4956A" stroke-width="3" stroke-linecap="round"/>
+            <rect x="20"  y="83"  width="9"  height="22" fill="#4A6FA5"/>
+            <rect x="31"  y="58"  width="13" height="47" fill="#5B82BA"/>
+            <rect x="46"  y="70"  width="10" height="35" fill="#6B94CC"/>
+            <rect x="58"  y="76"  width="8"  height="29" fill="#C4956A"/>
+            <rect x="68"  y="64"  width="11" height="41" fill="#5B82BA"/>
+            <rect x="81"  y="74"  width="9"  height="31" fill="#6B94CC"/>
+            <rect x="92"  y="82"  width="8"  height="23" fill="#7BA8D8"/>
+            <rect x="102" y="88"  width="7"  height="17" fill="#4A6FA5"/>
+            <path d="M 16,110 C 38,104 70,107 110,110"
+                  fill="none" stroke="#5B82BA" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M 152,62 C 148,50 143,36 132,28 C 134,30 138,36 142,46 C 146,53 150,59 152,62 Z" fill="#5B82BA"/>
+            <path d="M 152,62 C 148,52 144,42 137,33 C 140,38 145,50 152,62 Z" fill="#7BA8D8"/>
+            <path d="M 152,62 C 160,50 172,42 186,44 C 178,50 164,58 152,62 Z" fill="#5B82BA"/>
+            <path d="M 152,62 C 158,53 168,46 180,46 C 173,52 162,58 152,62 Z" fill="#6B94CC"/>
+            <path d="M 152,62 C 164,58 180,57 198,50 C 188,62 170,66 152,62 Z" fill="#4A6FA5"/>
+            <path d="M 152,62 C 158,70 167,76 178,74 C 170,69 160,65 152,62 Z" fill="#3D5E8A"/>
+            <path d="M 198,50 C 206,44 216,40 222,36 C 216,40 208,46 198,50 Z" fill="#5B82BA"/>
+            <path d="M 218,38 C 222,36 228,35 230,32 C 226,34 221,37 218,38 Z" fill="#5B82BA"/>
+            <path d="M 152,62 C 148,65 143,68 138,66 C 142,65 148,63 152,62 Z" fill="#4A6FA5"/>
+          </svg>
+          <span class="logo-text">urbain</span>
+        </div>
+        <p class="footer-tagline">誠実に、真摯に。<br>暮らしに寄り添う不動産パートナー。</p>
+      </div>
+      <div class="footer-links">
+        <h4>サービス</h4>
+        <ul>
+          <li><a href="#service">不動産売買</a></li>
+          <li><a href="#service">賃貸仲介</a></li>
+          <li><a href="#service">不動産管理</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>会社情報</h4>
+        <ul>
+          <li><a href="#about">会社概要</a></li>
+          <li><a href="#flow">ご利用の流れ</a></li>
+          <li><a href="#contact">お問い合わせ</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>アクセス</h4>
+        <address>
+          〒108-0074<br>
+          東京都港区高輪<br>
+          四丁目23番6号<br>
+          ハイホーム高輪708
+        </address>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 株式会社アーベイン All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="トップへ戻る">
+    <svg viewBox="0 0 24 24" fill="none"><path d="M5 15l7-7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+
+  <script src="main.js"></script>
+</body>
+</html>
