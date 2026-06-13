@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+/* ─── カイロソフト風：明るい空と草原 ─── */
+body {
+  background:
+    linear-gradient(#9ADCF0 0%, #BCE8F8 38%, #BCE8F8 60%, #8ACB5E 60.2%, #7EC850 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+.sprite { image-rendering: pixelated; }
+
+/* ─── ピクセルパネル ─── */
+.pix-panel {
+  background: #FCF4DC;
+  border: 3px solid #5A3C28;
+  border-radius: 6px;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.25);
+}
+.pix-title {
+  background: #F08020;
+  color: #FFF8E8;
+  border-bottom: 3px solid #5A3C28;
+  text-shadow: 1px 1px 0 #B05810;
+}
+
+/* ─── ピクセルボタン ─── */
+.pix-btn {
+  background: linear-gradient(#FFD878, #F0B028);
+  color: #5A3C28;
+  border: 3px solid #5A3C28;
+  border-radius: 6px;
+  box-shadow: 0 4px 0 #5A3C28;
+  transition: transform 0.05s, box-shadow 0.05s;
+}
+.pix-btn:hover { filter: brightness(1.06); }
+.pix-btn:active { transform: translateY(4px); box-shadow: 0 0 0 #5A3C28; }
+.pix-btn:disabled { opacity: 0.45; }
+.pix-btn:disabled:active { transform: none; box-shadow: 0 4px 0 #5A3C28; }
+.pix-btn-green { background: linear-gradient(#A0E060, #58B030); color: #FFFFFF; text-shadow: 1px 1px 0 #387018; }
+.pix-btn-plain { background: linear-gradient(#FFFFFF, #F0E0C0); }
+
+/* ─── 草タイル ─── */
+.grass {
+  background-image: repeating-conic-gradient(#74BE48 0% 25%, #6AB440 0% 50%);
+  background-size: 16px 16px;
+  border: 3px solid #5A3C28;
+  border-radius: 6px;
+}
+
+/* ─── UI keyframes ─── */
+@keyframes fadeSlide { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes backdropIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes cutinPop { from { opacity: 0; transform: translateY(24px) scale(0.92); } to { opacity: 1; transform: translateY(0) scale(1); } }
+@keyframes portraitIn { from { opacity: 0; transform: translateX(-14px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes hop { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+@keyframes stripes { from { background-position: 0 0; } to { background-position: 24px 0; } }
+.bar-stripes {
+  background-image: linear-gradient(45deg, rgba(255,255,255,.3) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.3) 50%, rgba(255,255,255,.3) 75%, transparent 75%);
+  background-size: 24px 24px;
+  animation: stripes 1s linear infinite;
+}
+
+/* ─── 背景の賑やかし keyframes ─── */
+@keyframes cloudDrift {
+  from { transform: translateX(-30vw); }
+  to   { transform: translateX(115vw); }
+}
+@keyframes birdFly {
+  0%   { transform: translateX(-10vw) translateY(0); }
+  25%  { transform: translateX(22vw)  translateY(-12px); }
+  50%  { transform: translateX(55vw)  translateY(4px); }
+  75%  { transform: translateX(85vw)  translateY(-8px); }
+  100% { transform: translateX(115vw) translateY(0); }
+}
+@keyframes balloonDrift {
+  from { transform: translateX(-12vw); }
+  to   { transform: translateX(115vw); }
+}
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-8px); }
+}
+@keyframes carDrive {
+  /* 車の縦位置：道路(60%〜+16px)に車輪が乗る高さ（車高20px・上端を60%-6pxに） */
+  0%   { transform: translateX(-15vw) translateY(-0.375rem) scaleX(1); }
+  45%  { transform: translateX(115vw) translateY(-0.375rem) scaleX(1); }
+  45.01% { transform: translateX(115vw) translateY(-0.375rem) scaleX(-1); }
+  90%  { transform: translateX(-15vw) translateY(-0.375rem) scaleX(-1); }
+  90.01% { transform: translateX(-15vw) translateY(-0.375rem) scaleX(1); }
+  100% { transform: translateX(-15vw) translateY(-0.375rem) scaleX(1); }
+}
+@keyframes sunPulse {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.07); }
+}
+
+@keyframes floatUp {
+  0%   { opacity: 0; transform: translate(-50%, 10px) scale(0.6); }
+  20%  { opacity: 1; transform: translate(-50%, -10px) scale(1.1); }
+  100% { opacity: 0; transform: translate(-50%, -120px) scale(1); }
+}
+@keyframes comboPop {
+  0%   { opacity: 0; transform: translate(-50%,-50%) scale(0.4) rotate(-6deg); }
+  30%  { opacity: 1; transform: translate(-50%,-50%) scale(1.2) rotate(-3deg); }
+  70%  { opacity: 1; transform: translate(-50%,-50%) scale(1) rotate(-3deg); }
+  100% { opacity: 0; transform: translate(-50%,-50%) scale(1.1) rotate(0deg); }
+}
